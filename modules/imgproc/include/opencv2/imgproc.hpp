@@ -2684,7 +2684,7 @@ Polar mapping can be linear or semi-log. Add one of #WarpPolarMode to `flags` to
 
 Linear is the default mode.
 
-The semilog mapping emulates the human "foveal" vision that permit very high acuity on the line of sight (central vision)
+The semilog mapping emulates the human "foveal" vision that permits very high acuity on the line of sight (central vision)
 in contrast to peripheral vision where acuity is minor.
 
 \par Option on `dsize`:
@@ -2711,10 +2711,10 @@ the destination image will have the given size therefore the area of the boundin
 
 \par Reverse mapping
 
-You can get reverse mapping adding #WARP_INVERSE_MAP to `flags`
+You can get reverse mapping by adding #WARP_INVERSE_MAP to `flags`
 \snippet polar_transforms.cpp InverseMap
 
-In addiction, to calculate the original coordinate from a polar mapped coordinate \f$(rho, phi)->(x, y)\f$:
+In addition, to calculate the original coordinate from a polar mapped coordinate \f$(rho, phi)->(x, y)\f$:
 \snippet polar_transforms.cpp InverseCoordinate
 
 @param src Source image.
@@ -2727,7 +2727,7 @@ In addiction, to calculate the original coordinate from a polar mapped coordinat
             - Add #WARP_POLAR_LOG to select semilog polar mapping
             - Add #WARP_INVERSE_MAP for reverse mapping.
 @note
--  The function can not operate in-place.
+-  The function cannot operate in-place.
 -  To calculate magnitude and angle in degrees #cartToPolar is used internally thus angles are measured from 0 to 360 with accuracy about 0.3 degrees.
 -  This function uses #remap. Due to current implementation limitations the size of an input and output images should be less than 32767x32767.
 
