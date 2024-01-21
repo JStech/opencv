@@ -464,7 +464,6 @@ TEST(Calib3d_CalibrateHandEye, regression_17986)
 
 TEST(Calib3d_CalibrateHandEye, regression_24871)
 {
-    RNG& rng = cv::theRNG();
     std::vector<Mat> R_target2cam, t_target2cam;
     std::vector<Mat> R_gripper2base, t_gripper2base;
     Mat T_true_cam2gripper;
