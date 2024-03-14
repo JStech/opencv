@@ -2104,6 +2104,9 @@ bool findCirclesGrid( InputArray _image, Size patternSize,
     }
 
     bool isValid = false;
+    CirclesGridFinder grid_finder(patternSize, parameters.gridType, parameters.numNeighbors);
+    grid_finder.findGrid(points);
+    /*
     const int attempts = 2;
     const size_t minHomographyPoints = 4;
     Mat H;
@@ -2155,6 +2158,7 @@ bool findCirclesGrid( InputArray _image, Size patternSize,
         convertPointsFromHomogeneous(orgPointsMat, centers);
     }
     Mat(centers).copyTo(_centers);
+    */
     return isValid;
 }
 
